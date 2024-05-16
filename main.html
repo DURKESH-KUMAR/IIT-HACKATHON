@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOW+TELL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #000000, #434343);
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            position: relative;
+        }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        nav ul li ul li {
+            display: block;
+            margin: 5px 0;
+        }
+        nav ul li a:hover {
+            color: #4caf50;
+        }
+        .btn-container {
+            display: flex;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #4caf50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .video-container {
+            float: right;
+            margin: 20px;
+            border-radius: 20px; 
+            overflow: hidden; 
+        }
+        .video-container iframe {
+            border-radius: 20px; 
+        }
+        .related-content {
+            float: right;
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" id="logo">SHOW+TELL</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Work</a>
+                    <ul>
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Development</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Studio</a>
+                    <ul>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Team</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Training</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sector</a></li>
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">Career</a></li>
+            </ul>
+        </nav>
+        <div class="btn-container">
+            <button class="btn">Start Project</button>
+            <button class="btn" style="border-radius: 50%;">+</button>
+        </div>
+    </header>
+    <!-- Video Container -->
+    <div class="video-container">
+        <video width="877" height="493" autoplay loop muted>
+            <source src="things.mp4" type="video/mp4">
+            <!-- Add other video sources here if needed -->
+            Your browser does not support the video tag.
+          </video>
+          
+          
+
+    </div>
+    <!-- Related Content -->
+    <div class="related-content">
+        <h2>Modern Technology</h2>
+        <p>Modern technology has revolutionized the way we live and work. From smartphones to artificial intelligence, technology continues to reshape our world.</p>
+        <p>Stay updated with the latest trends and innovations in technology to remain competitive in today's fast-paced digital landscape.</p>
+    </div>
+    <!-- Content goes here -->
+</body>
+</html>

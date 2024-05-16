@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Animation</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+  }
+  .countdown {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    animation: countdown 4s steps(100);
+  }
+  @keyframes countdown {
+    from { color: #fff; } /* White color from start */
+    to { color: #fff; } /* White color until end */
+  }
+</style>
+</head>
+<body>
+  <div class="countdown"></div>
+
+  <script>
+    // Set the duration of the countdown timer in milliseconds
+    const countdownDuration = 4000; // 4 seconds
+    const countdownElement = document.querySelector('.countdown');
+    let currentTime = countdownDuration / 1000;
+
+    // Function to update the countdown display
+    function updateCountdown() {
+      countdownElement.textContent = currentTime;
+      currentTime--;
+
+      // Check if the countdown is over
+      if (currentTime < 0) {
+        clearInterval(timerInterval);
+        window.location.href = 'main.html'; // Redirect to main.html
+      }
+    }
+
+    // Initial call to update the countdown display
+    updateCountdown();
+
+    // Start the countdown timer
+    const timerInterval = setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
